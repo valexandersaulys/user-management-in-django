@@ -22,7 +22,7 @@ Major points
 
     * does not autocreate! (very frustrating)
     * you can overwrite the save function... bad idea
-    * e
+    * better to create a signal -- `signals.py` if you have a lot
     
   
 
@@ -33,9 +33,25 @@ Snippets
 
 ```python
 from django.contrib.auth.models import User
+
 # will auto-committ to the database
+# will work for any django.db.models.Model object
 user = User.objects.create_user(
     username='john',
     email='jlennon@beatles.com',
     password='glass onion')
 ```
+
+
+Cheat Sheet pieces
+
+  * for each CBV
+    * the full path name
+    * what do you have to minimally provide
+    * default template name + context
+
+  * useful keywords for CBVs
+
+  * the two available mixins
+
+  * my added mixins
