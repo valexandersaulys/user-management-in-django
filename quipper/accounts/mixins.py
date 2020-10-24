@@ -8,7 +8,7 @@ class OwnedByUserMixin(UserPassesTestMixin):
         return self.get_object().user == self.request.user
 
 
-class AssignToUserMixin(object):
+class AssignToUserMixin(LoginRequiredMixin):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)

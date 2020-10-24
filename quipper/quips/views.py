@@ -12,7 +12,7 @@ from accounts.mixins import (
 
 
 class QuipListView(AddUserContextData, ListView):
-    # chirp_list.html
+    # quip_list.html
     model = Quip
     context_object_name = "quips"  # will get renamed in template
     # paginate_by = int   # if you want to

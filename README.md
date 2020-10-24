@@ -15,6 +15,8 @@ Major points
   * Basic Class Based Views for Quips
   
   * Leveraging Class Based Views for Users
+
+  * Building user sign up with CBVs
   
   * Leveraging Mixins to Quickly protect your app behind accounts
   
@@ -45,13 +47,35 @@ user = User.objects.create_user(
 
 Cheat Sheet pieces
 
-  * for each CBV
+  * for each CBV -- mention multiple ways to do things
     * the full path name
+    * what's it for
     * what do you have to minimally provide
     * default template name + context
+    * expectations from url (i.e. `<int:pk>`)
 
   * useful keywords for CBVs
 
   * the two available mixins
 
   * my added mixins
+
+
+
+Cheat Sheet List
+
+  * django.views.generic.ListView
+    * For displaying a list of objects
+    * Minimal Variables
+      * `model`: the model object it lists
+      * _or_ `get_queryset(self)`: returns the queryset of objects to list`
+    * Extras
+      * `paginate_by` 
+    * Looks in `<app-name>/<model-name>_list.html`
+    * No URL expectations
+
+  * django.views.generic.DetailView
+  * django.views.generic.TemplateView
+  * django.views.generic.edit.CreateView
+  * django.views.generic.edit.UpdateView
+  * django.views.generic.edit.DeleteView
