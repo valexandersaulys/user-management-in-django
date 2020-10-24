@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div>
+  <form method="POST" action="{% url 'quip_create' %}">
+    {% csrf_token %}
+    {{ form.content }}
+    <button type="submit">Submit New Quip</button>
+  </form>
+</div>
+{% endblock %}
+
+
+{% block js_content %}
+$('button').on('click', function(e) {
+  e.preventDefault();
+  console.log("clicked");
+  $.post(
+    "{% url 'quip_create' %}",
+    $('form').serialize(),
+    function(resp) {
+      console.log("success!", resp);  // could also put in a loading element
+      window.location.replace("/");
+    }
+  )
+});
+{% endblock %}

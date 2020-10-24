@@ -1,26 +1,35 @@
-Changes from last project
+# README
 
-  * add accounts as separate app
-  * add in basic homepage that uses log in only
-  * separate it with git more early on
+Major points
+
+  * Assusmptions at start about knowing Django with recs if you don't
+  
+  * Motivation: Why Use Class Based Views in Django?
+    * allows you to move quickly, less cruft
+    * enforces standards
+    
+  * The Catch: little immeadiate feedback & having to learn defaults
+  
+  * Separating concerns -- accounts app will be separate
+  
+  * Basic Class Based Views for Quips
+  
+  * Leveraging Class Based Views for Users
+  
+  * Leveraging Mixins to Quickly protect your app behind accounts
+  
+  * Extending User account details with OneToOne relationships
+
+    * does not autocreate! (very frustrating)
+    * you can overwrite the save function... bad idea
+    * e
+    
+  
 
 
-Set up a basic twitter site
-  * you can post and read other posts -- but only if logged in
-  otherwise it redirects to a homepage 
+________________________
 
-Outline
-
-  * explanation of "batteries-included" web frameworks and why they're
-    powerful -- what the catch is 
-
-    * force discipline on you while allowing you to move quickly
-
-  * Django includes user management -- which is slightly unusual as most force you into their own
-  *
-
-
-
+Snippets
 
 ```python
 from django.contrib.auth.models import User

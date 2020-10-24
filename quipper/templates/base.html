@@ -1,0 +1,21 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <script src="{% static 'zepto.js' %}"></script>
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+  </body>
+  <script>
+   {% block js_content %}
+   {% endblock %}
+  </script>
+</html>
+
+
+

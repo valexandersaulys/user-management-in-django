@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- action={...} the same url as GET if not mentioned -->
+<form method="POST">
+  {% csrf_token %}
+  <button type="submit">Delete Quip?</button>
+</form>
+{% endblock %}

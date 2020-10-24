@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Quips List</h1>
+
+<a href="{% url 'quip_create' %}">
+  <button>
+    Create new Tweet
+  </button>
+</a>
+<br/>
+<a href="{% url 'user_profile' %}">
+  <button>
+    User Profile Details
+  </button>
+</a>
+{% for quip in quips %}
+<div style="display:block;margin:2rem;">
+  <div style="display:inline;">@{{ quip.user }}</div>
+  {% if quip.user == user %}
+  <div style="display:inline">
+    <a href="{% url 'quip_delete' pk=quip.id %}">
+      <button style="color:red;">X</button>
+    </a>
+  </div>
+  {% endif %}
+  <p>{{ quip.content }}</p>
+</div>
+{% endfor %}
+
+<div>
+  <a href="{% url 'password_reset' %}">Reset password via email</a>
+</div>
+{% endblock %}

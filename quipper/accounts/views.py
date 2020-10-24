@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+from accounts.mixins import AddUserContextData
+
+
+class UserDetailView(AddUserContextData, TemplateView):
+    template_name = "registration/user_detail.html"
