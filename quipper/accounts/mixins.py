@@ -2,9 +2,9 @@ from django.http import JsonResponse
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
 
-class OwnedByUserMixin(UserPassesTestMixin):
+class OwnedByUserMixin(UserPassesTestMixin, LoginRequiredMixin):
     def test_func(self):
-        """Check that the user owns this chirp"""
+        """Check that the user owns this quip"""
         return self.get_object().user == self.request.user
 
 

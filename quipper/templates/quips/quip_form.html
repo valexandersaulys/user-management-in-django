@@ -3,7 +3,7 @@
 
 {% block content %}
 <div>
-  <form method="POST" action="{% url 'quip_create' %}">
+  <form method="POST">
     {% csrf_token %}
     {{ form.content }}
     <button type="submit">Submit New Quip</button>

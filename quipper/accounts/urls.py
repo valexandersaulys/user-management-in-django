@@ -34,10 +34,6 @@ registration/password_reset_subject.txt  # subject line for the email
 django.contrib.auth.PasswordResetView
 accounts/password_reset/ [name='password_reset']
 
-registration/password_reset_done.html
-django.contrib.auth.PasswordResetDoneView
-accounts/password_reset/done/ [name='password_reset_done']
-
 regisration/password_reset_confirm.html  # "form" object to change password post email
 django.contrib.auth.PasswordResetConfirmView
 accounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
