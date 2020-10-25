@@ -16,7 +16,7 @@ class QuipListView(AddUserContextData, ListView):
     model = Quip
     context_object_name = "quips"  # will get renamed in template
     # paginate_by = int   # if you want to
-    # def get_queryset()   # can be overridden
+    # def get_queryset(self, **kwargs)   # can be overridden
 
 
 class QuipDetailView(DetailView):
